@@ -3,7 +3,7 @@
 A typescript project template for solving advent of code challenges.
 
 Use the defined project structure for best results. Create a new folder for each year, and a sub folder for each day.
-Happy Coding!
+Happy Coding!!!
 
 # How to run
 
