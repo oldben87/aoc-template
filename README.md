@@ -4,7 +4,7 @@ A project template for solving advent of code challenges
 
 # How to run
 
-1.  - `npm install`
+1.  `npm install`
 2.  `npx ts-node 2015/Day1`
 
 # CLI Flags
