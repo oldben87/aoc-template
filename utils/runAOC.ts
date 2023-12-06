@@ -4,13 +4,13 @@ import path from "path"
 const DATA_PATH_ARGUMENT = "-dp"
 const BASE_PATH_ARGUMENT = "-bp"
 
-interface RunAOCOptions<T> {
-  part1?: (data: Array<string> | T) => number | string
-  part2?: (data: Array<string> | T) => number | string
+type RunAOCOptionsGeneric<T> = {
+  part1?: (data: T) => number | string
+  part2?: (data: T) => number | string
   customDataParser?: (data: string) => T
 }
 
-const runAOC = <T>(options?: RunAOCOptions<T>) => {
+const runAOC = <T = Array<string>>(options: RunAOCOptionsGeneric<T>) => {
   const part1 = options?.part1
   const part2 = options?.part2
   const customDataParser = options?.customDataParser
@@ -112,7 +112,7 @@ const runAOC = <T>(options?: RunAOCOptions<T>) => {
 
   const data = !!customDataParser
     ? customDataParser(rawInput)
-    : rawInput.split("\n")
+    : (rawInput.split("\n") as T)
 
   const runAll = !isPart1 && !isPart2
 
