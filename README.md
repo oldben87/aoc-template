@@ -1,6 +1,7 @@
 # aoc-template
 
 A typescript project template for solving advent of code challenges.
+[Advent of Code](https://adventofcode.com/)
 
 Use the defined project structure for best results. Create a new folder for each year, and a sub folder for each day.
 Happy Coding!!!
